@@ -47,7 +47,7 @@ export default function CartContainer(props: ICartContainerProps) {
 				}}
 				item={activeItem}
 			/>
-			{products && products.length > 0 && (
+			{products && products.length > 0 ? (
 				<Table celled padded>
 					<Table.Header>
 						<Table.Row>
@@ -112,6 +112,8 @@ export default function CartContainer(props: ICartContainerProps) {
 						</Table.Row>
 					</Table.Footer>
 				</Table>
+			) : (
+				<Header  textAlign='center'>Your cart is empty</Header>
 			)}
 
 			{/* < */}
